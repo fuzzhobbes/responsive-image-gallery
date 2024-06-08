@@ -1,0 +1,256 @@
+:root {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    max-width: 1280px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0px !important;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.page-container {
+    margin-bottom: 70px;
+}
+
+nav {
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+nav .logo .title {
+     color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+nav ul li {
+    color: #ffffff;
+    padding: 22px 40px;
+    background-color: aliceblue;
+}
+
+nav ul li:hover {
+    background-color: aquamarine;
+}
+
+nav ul li.active {
+    background-color: bisque;
+}
+
+nav ul li a {
+    color: #4eadd8;
+    text-decoration: none;
+}
+/*tablets */
+@media all and (max-width: 800px) {
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+}
+/*phones */
+@media all and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    background-image: url(https://wallpapers.com/images/high/iron-man-superhero-giant-hand-mjwa1a8e3xn8234c.webp);
+    background-size: cover;
+    background-color: #eac20e;
+    text-align: center;
+}
+
+@keyframes welcome {
+    from {
+        opacity: 0.0;
+        top: -100px;
+    }
+
+    to {
+        opacity: 1.0;
+        top: 0.0;
+    }
+    
+}
+
+.banner .heading {
+    flex: 1;
+    justify-self: center;
+    color: goldenrod;
+    font-size: 4em;
+    font-weight: bold;
+    position: relative;
+    animation: welcome 1s ease-in-out 0s forwards;
+}
+
+.banner .heading small {
+    font-size: 24px;
+}
+
+.maintext {
+    font-size: 18px;
+    padding: 12px;
+}
+
+.subtext {
+    display: flex;
+}
+.subtext div {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #f0e8e8;
+}
+
+.subtext .red {
+    background-color: #a11515;
+}
+
+.subtext .gold {
+    background-color: #473ce4;
+}
+
+.subtext .thor {
+    background-color: #a11515;
+}
+
+.quote {
+    display: block;
+    background-color: darkgray;
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote::before {
+    display: inline-block;
+    content: open-quote;
+    color: black;
+    font-size: 32px;
+}
+
+.quote::after {
+    display: inline-block;
+    content: close-quote;
+    color: black;
+    font-size: 32px;
+}
+
+h3.title {
+    font-size: 24px;
+    padding: 12px;
+    margin: 6px;
+    border-top: 5px solid rgb(175, 55, 22);
+    border-bottom: 5px solid rgb(175, 55, 22) ;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex-basis: 325px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+}
+
+.project h4 {
+    font-size: 20px;
+    padding: 12px;
+    margin: 6px;
+    border-top: 5px solid goldenrod;
+    border-bottom: 5px solid goldenrod;
+}
+
+.project p {
+    padding: 0px 12px;
+}
+
+.projects img {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.projects img:hover {
+    transform: scale(0.95);
+    opacity: 0.5;
+}
+
+.projects button {
+    background-color: #eac20e;
+    color: #a11515;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.project button:hover {
+    background-color: #a11515;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(226, 200, 84);
+    color: aliceblue;
+    text-align: center;
+    padding: 24px;
+}
