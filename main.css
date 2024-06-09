@@ -54,6 +54,8 @@ nav ul li {
     color: #ffffff;
     padding: 22px 40px;
     background-color: rgb(153, 25, 5);
+    margin: 5px;
+    border-radius: 5px;
 }
 
 nav ul li:hover {
@@ -61,7 +63,7 @@ nav ul li:hover {
 }
 
 nav ul li.active {
-    background-color: rgb(48, 103, 159);
+    background-color: goldenrod;
 }
 
 nav ul li a {
@@ -142,6 +144,7 @@ nav ul li a {
 
 .subtext {
     display: flex;
+    justify-content: space-evenly;
 }
 .subtext div {
     padding: 20px;
