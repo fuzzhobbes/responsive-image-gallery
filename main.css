@@ -53,15 +53,15 @@ nav ul {
 nav ul li {
     color: #ffffff;
     padding: 22px 40px;
-    background-color: aliceblue;
+    background-color: rgb(153, 25, 5);
 }
 
 nav ul li:hover {
-    background-color: aquamarine;
+    background-color: rgb(217, 150, 16);
 }
 
 nav ul li.active {
-    background-color: bisque;
+    background-color: rgb(48, 103, 159);
 }
 
 nav ul li a {
@@ -155,7 +155,7 @@ nav ul li a {
 }
 
 .subtext .gold {
-    background-color: #473ce4;
+    background-color: #d7a717;
 }
 
 .subtext .thor {
@@ -164,7 +164,7 @@ nav ul li a {
 
 .quote {
     display: block;
-    background-color: darkgray;
+    background-color: rgb(197, 25, 25);
     padding: 50px;
     text-align: center;
     font-style: italic;
@@ -244,13 +244,93 @@ h3.title {
 .project button:hover {
     background-color: #a11515;
 }
+
+/* Contact */
+
+.container {
+    display: flex;
+    border-radius: 5px;
+    background-color: #eac20e;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+.container form {
+    flex: 1;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(196, 19, 19);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    height: 50px;
+}
+
+input[type=submit] {
+    background-color: #a11515;
+    color: #f0e8e8;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    background-color: lightcoral ;
+}
+
+.container .map {
+    padding: 12px;
+    margin-left: 20px;
+    flex: 1;
+}
+
+
 .footer {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(226, 200, 84);
+    background-color: rgb(229, 168, 26);
     color: aliceblue;
     text-align: center;
     padding: 24px;
+}
+
+/*tablets */
+@media all and (max-width: 800px) {
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+}
+/*phones */
+@media all and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .container .map {
+        margin-left: 0px;
+    }
 }
